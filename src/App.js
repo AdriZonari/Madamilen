@@ -6,10 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logotyp_png} width="358" height="64" className="Madamilen-logo" alt="logo" />
-        </header>
-    
+    <AppHeader />
     <div className="App-intro">
         <div className="pink">
         </div>
@@ -21,11 +18,16 @@ class App extends Component {
         <button className="stad">Landskrona</button>
         <button className="kommande">På Gång</button>
         </div>
-        
      </div>
 </div>
     );
   }
 }
+
+const AppHeader = () =>  
+    
+      <header className="App-header">
+          <img src={logotyp_png} width="358" height="64" className="Madamilen-logo" alt="logo" />
+        </header>
 
 export default App;
