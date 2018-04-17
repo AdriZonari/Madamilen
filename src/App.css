@@ -1,20 +1,14 @@
+
 .App {
   text-align: center;
-  height: 530px;
-  
-
+  height: 800px;
 }
-
-  /*.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}*/
 
 .App-header {
   background-color: #ffffff;
-  height: 150px;
-  padding: 20px;
-  font-family: "museo-slab-1","museo-slab-2",serif;
+  height: 100px;
+  padding: 10px;
+  font-family: "museo_slab_500",serif;
   color: #404040;
 }
 
@@ -25,10 +19,61 @@
 
 .App-intro {
   font-size: large;
+  height: 564px;
 }
 
-/*@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}*/
 
+.pink {
+  background-image: 
+    linear-gradient(
+      rgba(255, 0, 255, 0.4),
+      rgba(255, 0, 255, 0.4)
+    ),
+    url(choklad.jpg);
+  background-size: cover;
+  height: 564px;
+  width: 375px;
+  position: relative;
+  float: left;
+}
+
+.transbox {
+  margin: 30px ;
+  background-color: #ffffff;
+  opacity: 1;
+  position: absolute;
+}
+
+.foreground {
+  font-family: "museo_slab_500",serif;
+  color: #ffffff;
+  font-size: 2rem;
+  position: absolute;
+  margin: 20px 20px;
+  opacity: 1;
+  font-kerning: auto;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+ p {
+  font-size: 1.5rem;
+}
+
+.stad {
+  font-size: 3rem;
+  margin: 40px 0px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.kommande {
+  font-size: 2rem;
+  padding: 10px;
+  margin: 40px 0px;
+  background-color: #ffffff;
+  opacity: 0.7;
+  border-radius: 1rem
+}
