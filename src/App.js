@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import logotyp_png from './logotyp_png.png'
+import prickar_png from './prickar_png.png'
 
 class App extends Component {
   render() {
@@ -8,7 +9,7 @@ class App extends Component {
       <div className="App">
     <AppHeader />
     <div className="App-intro">
-        <div className="pink">
+        <div className="background">
         </div>
         <div className="foreground">
         <h1>Välkommen!</h1>
@@ -16,7 +17,8 @@ class App extends Component {
            vandring under dagtid. Ett möte mellan matglada.
             Tio stopp och tio smaksensationer.</p>
         <button className="stad">Landskrona</button>
-        <button className="kommande">På Gång</button>
+        <img className="prickar" src={prickar_png} width="345" height="30" alt="prickar" />
+        <button className="kommande">Kommande Madamilen</button>
         </div>
      </div>
 </div>
