@@ -23,13 +23,13 @@
 }
 
 
-.pink {
+.background {
   background-image: 
     linear-gradient(
-      rgba(255, 0, 255, 0.4),
-      rgba(255, 0, 255, 0.4)
+    rgba(255, 255, 255, 0.6),
+    rgba(133, 133, 134, 0.6)
     ),
-    url(choklad.jpg);
+    url(champagne.jpg);
   background-size: cover;
   height: 564px;
   width: 375px;
@@ -46,7 +46,7 @@
 
 .foreground {
   font-family: "museo_slab_500",serif;
-  color: #ffffff;
+  color: #404040;
   font-size: 2rem;
   position: absolute;
   margin: 20px 20px;
@@ -64,17 +64,19 @@ h1 {
 
 .stad {
   font-size: 3rem;
-  margin: 40px 0px;
+  margin: 20px 0px 50px 0px;
   font-weight: bold;
-  color: #ffffff;
+  color: #404040;
 }
 
 .kommande {
   font-size: 2rem;
-  padding: 10px;
-  margin: 40px 0px;
+  padding: 5px;
+  margin: 30px 0px;
   background-color: #ffffff;
-  opacity: 1;
   color: #404040;
+  opacity: 1;
+  border:1px;
   border-radius: 1rem;
+  box-sizing: border-box;
 }
