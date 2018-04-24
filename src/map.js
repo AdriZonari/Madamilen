@@ -27,23 +27,27 @@ export class MapContainer extends Component {
         }
     }
 
-componentDidUpdate(prevProps, prevState) {
-        if (prevProps.google !== this.props.google) {
-          this.loadMap();
-        }
+    componentDidMount() {
+      this.loadMap();
+    }
+  
+    componentDidUpdate(prevProps, prevState) {
+      if (prevProps.google !== this.props.google) {
+        this.loadMap();
       }
+    }
+
 
   render() {
     
-    if (!this.props.loaded){
-    return (<div ref='map'>Loading...</div> )  
-    }
     const style = { width : '100vw',
                   height: '100vh'
     }
     return (
-        <div style={style}>
-        <Map google={this.props.google} />
+       <div ref='map'>Laddar kartan...</div>,
+        <div >
+        <Map google={this.props.google}
+              style={style} />
         </div>    
         )
     }
