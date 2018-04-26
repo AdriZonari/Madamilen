@@ -1,58 +1,53 @@
-import {Map, GoogleApiWrapper} from 'google-maps-react';
-import React, { Component } from 'react';
+
+import React, { Component } from "react";
+import GoogleMapReact from "google-map-react";
+import if_Marker_66990 from "./if_Marker_66990.png";
+
 import './App.css';
 import ReactDOM from 'react-dom';
 
 
-export class MapContainer extends Component {
+export const AnyReactComponent = ({ text, img }) => (
+  <div>
+    {text},{img}
+  </div>
+);
 
-    loadMap() {
-        if (this.props && this.props.google) {
-          // google is available
-          const {google} = this.props;
-          const maps = google.maps;
-    
-          const mapRef = this.refs.map;
-          const node = ReactDOM.findDOMNode(mapRef);
-
-        let zoom = 14;
-        let lat = 37.774929;
-        let lng = -122.419416;
-        const center = new maps.LatLng(lat, lng);
-        const mapConfig = Object.assign({}, {
-        center: center,
-        zoom: zoom
-      })
-      this.map = new maps.Map(node, mapConfig);
-        }
-    }
-
-    componentDidMount() {
-      this.loadMap();
-    }
-  
-    componentDidUpdate(prevProps, prevState) {
-      if (prevProps.google !== this.props.google) {
-        this.loadMap();
-      }
-    }
+class SimpleMap extends Component {
+  static defaultProps = {
+    center: {
+      lat: 55.866667,
+      lng: 12.833333
+    },
+    zoom: 11,
+    text: "Landskrona",
+    language: "sv",
+    region: "sv"
+  };
 
 
   render() {
     
-    const style = { width : '100vw',
-                  height: '100vh'
-    }
     return (
-       <div ref='map'>Laddar kartan...</div>,
-        <div >
-        <Map google={this.props.google}
-              style={style} />
-        </div>    
-        )
-    }
+
+      // Important! Always set the container height explicitly
+      <div style={{ height: "100vh", width: "100%" }}>
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: "AIzaSyAk9nBuXiuBcbnY9VP8bFWrJs30MM0eINM" }}
+          defaultCenter={this.props.center}
+          defaultZoom={this.props.zoom}
+        >
+          <AnyReactComponent
+            lat={55.90456}
+            lng={12.8088}
+            text={"Erikstorps Kungsgård"}
+          >
+            <img src={if_Marker_66990} alt="" />
+          </AnyReactComponent>
+        </GoogleMapReact>
+      </div>
+    );
+  }
 }
- 
-export default GoogleApiWrapper({
-  apiKey : "AIzaSyAk9nBuXiuBcbnY9VP8bFWrJs30MM0eINM"
-})(MapContainer)
+
+export default SimpleMap;
