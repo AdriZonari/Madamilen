@@ -1,6 +1,11 @@
+
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
-import if_Marker_66990 from "./logotyp_png.png";
+import if_Marker_66990 from "./if_Marker_66990.png";
+
+import './App.css';
+import ReactDOM from 'react-dom';
+
 
 export const AnyReactComponent = ({ text, img }) => (
   <div>
@@ -20,8 +25,11 @@ class SimpleMap extends Component {
     region: "sv"
   };
 
+
   render() {
+    
     return (
+
       // Important! Always set the container height explicitly
       <div style={{ height: "100vh", width: "100%" }}>
         <GoogleMapReact
