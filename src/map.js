@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
-import GoogleMapReact from 'google-map-react';
-import if_Marker_66990 from './if_Marker_66990.png';
+import React, { Component } from "react";
+import GoogleMapReact from "google-map-react";
+import if_Marker_66990 from "./logotyp_png.png";
 
-
-const AnyReactComponent = ({ text, img }) => <div>{text},{img}</div>;
-
+export const AnyReactComponent = ({ text, img }) => (
+  <div>
+    {text},{img}
+  </div>
+);
 
 class SimpleMap extends Component {
   static defaultProps = {
@@ -21,7 +23,7 @@ class SimpleMap extends Component {
   render() {
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: '100vh', width: '100%' }}>
+      <div style={{ height: "100vh", width: "100%" }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyAk9nBuXiuBcbnY9VP8bFWrJs30MM0eINM" }}
           defaultCenter={this.props.center}
@@ -29,16 +31,15 @@ class SimpleMap extends Component {
         >
           <AnyReactComponent
             lat={55.90456}
-            lng={12.80880}
-            text={'Erikstorps Kungsgård'}>
-            <img src={if_Marker_66990}w10 alt=""/>
+            lng={12.8088}
+            text={"Erikstorps Kungsgård"}
+          >
+            <img src={if_Marker_66990} alt="" />
           </AnyReactComponent>
         </GoogleMapReact>
       </div>
     );
-
   }
-
 }
 
-export default SimpleMap; 
+export default SimpleMap;
