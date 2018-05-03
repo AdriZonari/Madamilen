@@ -24,10 +24,10 @@ class App extends Component {
                         <button className="stad">
                         <h1>Lund</h1>
                         </button>
-                      </Link> 
+                      </Link> <br/>
                       
                       <img className="prickar" src={prickar_png} width="345" height="30" alt="prickar" />
-                      
+                      <br/>
                       <Link to = "/list">
                         <button className="kommande">
                         <p>Kommande Madamilen!</p>

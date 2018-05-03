@@ -2,6 +2,7 @@ import React from "react";
 import { GoogleApiWrapper, InfoWindow, Map, Marker } from "google-maps-react";
 import Paper from "material-ui/Paper";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import Current from "./currentlocation";
 
 class GoogleMapsContainer extends React.Component {
   constructor(props) {
@@ -11,10 +12,23 @@ class GoogleMapsContainer extends React.Component {
       activeMarker: {},
       selectedPlace: {}
     };
+    //getLocation ref
+    this.getInnerRef = this.getInnerRef.bind(this);
+    this.getLocation = this.getLocation.bind(this);
     // binding this to event-handler functions
     this.onMarkerClick = this.onMarkerClick.bind(this);
     this.onMapClick = this.onMapClick.bind(this);
   }
+//getLocation funktion
+innerRef;
+getInnerRef(ref) {
+  this.innerRef = ref;
+}
+
+getLocation() {
+  this.innerRef && this.innerRef.getLocation();
+}
+
   onMarkerClick = (props, marker, e) => {
     this.setState({
       selectedPlace: props,
@@ -32,12 +46,15 @@ class GoogleMapsContainer extends React.Component {
   };
 
   render() {
+    const { getInnerRef, getLocation } = this;
+
     const style = {
       width: "100",
       height: "100",
       marginLeft: "auto",
       marginRight: "auto"
     };
+
     return (
       <Map
         item
@@ -47,7 +64,10 @@ class GoogleMapsContainer extends React.Component {
         onClick={this.onMapClick}
         zoom={14}
         initialCenter={{ lat: 55.7047, lng: 13.191 }}
+        gestureHandling= {'cooperative'}
       >
+        <Current ref={getInnerRef}/>
+        <button onClick={getLocation}>Get location</button>
         <Marker
           onClick={this.onMarkerClick}
           title={"Grand Hotel"}
@@ -87,3 +107,4 @@ class GoogleMapsContainer extends React.Component {
 export default GoogleApiWrapper({
   apiKey: "AIzaSyChp6lpBy8QtrTlHuIzPoRSTY7eoTZVRuA"
 })(GoogleMapsContainer);
+  
