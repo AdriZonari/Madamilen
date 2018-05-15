@@ -27,4 +27,6 @@ export default geolocated({
   },
   userDecisionTimeout: 5000,
   watchPosition: true,
+  suppressLocationOnMount: false,
+  geolocationProvider: navigator.geolocation
 })(Current);
