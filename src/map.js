@@ -5,6 +5,7 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import Current from "./currentlocation";
 import map_marker_ball_pink_icon from './map_marker_ball_pink_icon.png';
 
+var position = {Current};
 
 class GoogleMapsContainer extends React.Component {
   constructor(props) {
@@ -53,10 +54,17 @@ class GoogleMapsContainer extends React.Component {
         google={this.props.google}
         onClick={this.onMapClicked}
         zoom={14}
-        initialCenter={{ lat: 55.704660, lng: 13.191007 }}
+        initialCenter={{ lat: 55.60587, lng: 13.00073}}
         gestureHandling= {'cooperative'}
       >
-        <Current/>
+        {/*<Current/>*/}
+
+        <Marker
+          onClick={this.onMarkerClick}
+          title={"Du är här"}
+          position={position}
+          name={`Du är här`}
+          />
 
         <Marker
           onClick={this.onMarkerClick}
