@@ -14,7 +14,9 @@ class GoogleMapsContainer extends React.Component {
     this.state = {
       showingInfoWindow: false,
       activeMarker: {},
-      selectedPlace: {}
+      selectedPlace: {},
+      lat:"",
+      lng: "",
     };
    
     // binding this to event-handler functions
@@ -44,6 +46,7 @@ class GoogleMapsContainer extends React.Component {
         lat: location.coords.latitude,
         lng: location.coords.longitude
       })
+      return this.state;
     });
   }
 
@@ -55,6 +58,7 @@ class GoogleMapsContainer extends React.Component {
       marginLeft: "auto",
       marginRight: "auto"
     };
+    let location = {lat: this.state.lat, lng: this.state.lng}
 
     return (
       <Map
@@ -72,8 +76,8 @@ class GoogleMapsContainer extends React.Component {
         <Marker
           onClick={this.onMarkerClick}
           title={"Du är här"}
-          position={{lat: this.props.location.latitude,
-                    lng: this.props.location.longitude}}
+          position={{lat: location.lat,
+                    lng: location.lng}}
           name={`Du är här`}
         />
 
