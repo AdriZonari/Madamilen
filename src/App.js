@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import logotyp_png from './logotyp_png.png'
-import prickar_png from './prickar_png.png'
+import logotyp_png from './logotyp_png.png';
+import prickar_png from './prickar_png.png';
 import  './map.js';
 import  './list';
 import {Link} from 'react-router-dom';

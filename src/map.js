@@ -2,10 +2,8 @@ import React from "react";
 import { GoogleApiWrapper, InfoWindow, Map, Marker } from "google-maps-react";
 import Paper from "material-ui/Paper";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-//import CurrentLocation from "./currentlocation";
-import map_marker_ball_pink_icon from './map_marker_ball_pink_icon.png';
-
-//var position = {CurrentLocation}; 
+import location_user from './location_user.png';
+ 
 
 
 class GoogleMapsContainer extends React.Component {
@@ -14,9 +12,7 @@ class GoogleMapsContainer extends React.Component {
     this.state = {
       showingInfoWindow: false,
       activeMarker: {},
-      selectedPlace: {},
-      lat:"",
-      lng: "",
+      selectedPlace: {}
     };
    
     // binding this to event-handler functions
@@ -58,7 +54,9 @@ class GoogleMapsContainer extends React.Component {
       marginLeft: "auto",
       marginRight: "auto"
     };
+
     let location = {lat: this.state.lat, lng: this.state.lng}
+
 
     return (
       <Map
@@ -71,9 +69,9 @@ class GoogleMapsContainer extends React.Component {
         initialCenter={{ lat: 55.60587, lng: 13.00073}}
         gestureHandling= {'cooperative'}
       >
-        {/*<Current/>*/}
-
-        <Marker
+        
+        <Marker 
+          icon={location_user}
           onClick={this.onMarkerClick}
           title={"Du är här"}
           position={{lat: location.lat,
