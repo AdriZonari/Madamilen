@@ -2,10 +2,11 @@ import React from "react";
 import { GoogleApiWrapper, InfoWindow, Map, Marker } from "google-maps-react";
 import Paper from "material-ui/Paper";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import Current from "./currentlocation";
+//import CurrentLocation from "./currentlocation";
 import map_marker_ball_pink_icon from './map_marker_ball_pink_icon.png';
 
-var position = {Current};
+//var position = {CurrentLocation}; 
+
 
 class GoogleMapsContainer extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class GoogleMapsContainer extends React.Component {
       showingInfoWindow: true
     });
   };
-  onMapClicked = props => {
+  onMapClicked = (props) => {
     if (this.state.showingInfoWindow) {
       this.setState({
         showingInfoWindow: false,
@@ -36,6 +37,15 @@ class GoogleMapsContainer extends React.Component {
       });
     }
   };
+
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition(location => {
+      this.setState({
+        lat: location.coords.latitude,
+        lng: location.coords.longitude
+      })
+    });
+  }
 
   render() {
 
@@ -62,14 +72,15 @@ class GoogleMapsContainer extends React.Component {
         <Marker
           onClick={this.onMarkerClick}
           title={"Du är här"}
-          position={position}
+          position={{lat: this.props.location.latitude,
+                    lng: this.props.location.longitude}}
           name={`Du är här`}
-          />
+        />
 
         <Marker
           onClick={this.onMarkerClick}
           title={"Grand Hotel"}
-          position={{ lat: 55.7039, lng: 13.189 }}
+          position={{ lat: 55.703833, lng: 13.189417 }}
           name={`Grand Hotel`}
           address={"Bantorget 1, 222 29"}
           phone={"046-280 61 00"}

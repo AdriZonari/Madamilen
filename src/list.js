@@ -9,7 +9,7 @@ const AppHeader = () =>
         </header>
 
 
-export class MadamilensList extends Component {
+export class List extends Component {
   render() {
     return (
 <div className="MadamilensList">
