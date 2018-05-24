@@ -3,6 +3,8 @@ import { GoogleApiWrapper, InfoWindow, Map, Marker } from "google-maps-react";
 import Paper from "material-ui/Paper";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import location_user from './location_user.png';
+import { RestaurantList } from "./restaurantlist";
+
  
 
 
@@ -50,7 +52,6 @@ class GoogleMapsContainer extends React.Component {
 
    const style = {
       width: "100",
-      height: "100",
       marginLeft: "auto",
       marginRight: "auto"
     };
@@ -65,10 +66,12 @@ class GoogleMapsContainer extends React.Component {
         style={style}
         google={this.props.google}
         onClick={this.onMapClicked}
-        zoom={14}
-        initialCenter={{ lat: 55.60587, lng: 13.00073}}
+        zoom={11}
+        initialCenter={{ lat: 55.405383, lng: 12.919958}}
         gestureHandling= {'cooperative'}
       >
+
+      <RestaurantList/>
         
         <Marker 
           icon={location_user}
@@ -81,21 +84,85 @@ class GoogleMapsContainer extends React.Component {
 
         <Marker
           onClick={this.onMarkerClick}
-          title={"Grand Hotel"}
-          position={{ lat: 55.703833, lng: 13.189417 }}
-          name={`Grand Hotel`}
-          address={"Bantorget 1, 222 29"}
-          phone={"046-280 61 00"}
+          title={"Fotevikens Café och Restaurang"}
+          position={{ lat: 55.4282, lng: 12.9520 }}
+          name={`Fotevikens Café och Restaurang`}
+          address={"Museivägen 27, 236 91"}
+          phone={"040-330 800"}
         />
 
         <Marker
           onClick={this.onMarkerClick}
-          title={"Malmstens Fisk & Kök"}
-          position={{ lat: 55.701538, lng: 13.193845 }}
-          name={`Malmstens Fisk och Kök`}
-          address={`Västra Mårtensgatan 9, 223 51`}
-          phone={"046-12 63 54"}
+          title={"Delitorget på ICA Toppen"}
+          position={{ lat: 55.425826, lng: 12.964215 }}
+          name={`Delitorget på ICA Toppen`}
+          address={`Kungstorpsvägen 8B, 236 32`}
+          phone={"040-453 915"}
         />
+
+        <Marker
+          onClick={this.onMarkerClick}
+          title={"Caféet i det Gröna"}
+          position={{ lat: 55.419850, lng: 12.954818 }}
+          name={`Caféet i det Gröna`}
+          address={`Falsterbovägen 54, 236 51`}
+          phone={"040-453 915"}
+        />
+
+        <Marker
+          onClick={this.onMarkerClick}
+          title={"Vespa"}
+          position={{ lat: 55.417900, lng: 12.952494 }}
+          name={`Vespa`}
+          address={`Falsterbovägen 66, 236 51`}
+          phone={"040-450 845"}
+        />
+
+        <Marker
+          onClick={this.onMarkerClick}
+          title={"Höllviken Kött och Grill"}
+          position={{ lat: 55.420352, lng: 12.954790 }}
+          name={`Höllviken Kött och Grill`}
+          address={`Falsterbovägen 65, 236 51`}
+          phone={"040-450 404"}
+        />
+
+        <Marker
+          onClick={this.onMarkerClick}
+          title={"Näset by the Sea"}
+          position={{ lat: 55.410222, lng: 12.932802 }}
+          name={`Näset by the Sea`}
+          address={`Västra Hamnplan 1, 236 41`}
+          phone={"040-451 778"}
+        />
+
+        <Marker
+          onClick={this.onMarkerClick}
+          title={"Shakespeare Pub"}
+          position={{ lat: 55.417738, lng: 12.951353 }}
+          name={`Shakespeare Pub`}
+          address={`Falsterbovägen 83, 236 51`}
+          phone={"040-450 486"}
+        />
+
+        <Marker
+          onClick={this.onMarkerClick}
+          title={"Gateau"}
+          position={{ lat: 55.420089, lng: 12.955317 }}
+          name={`Gateau`}
+          address={`Falsterbovägen 50, 236 51`}
+          phone={"040-666 9905"}
+        />
+
+        <Marker
+          onClick={this.onMarkerClick}
+          title={"Smakverkeri"}
+          position={{ lat: 55.414715, lng: 12.859918 }}
+          name={`Smakverkeri`}
+          address={`Valthornsgatan, Skanör 239 31`}
+          phone={"0735 25 82 81"}
+        />
+
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}
@@ -103,10 +170,11 @@ class GoogleMapsContainer extends React.Component {
           <MuiThemeProvider>
             <Paper>
               <h4 variant="headline">{this.state.selectedPlace.name}</h4>
-              <p>
+              <p className="infowindowtext">
                 {this.state.selectedPlace.address}
                 <br />
                 {this.state.selectedPlace.phone}
+                <br />
               </p>
             </Paper>
           </MuiThemeProvider>{" "}

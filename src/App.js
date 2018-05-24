@@ -20,10 +20,8 @@ class App extends Component {
                     vandring under dagtid. Ett möte mellan matglada.
                     Tio stopp och tio smaksensationer.</p>
                       
-                      <Link to = "/map">
-                        <button className="stad">
-                        <h1>Lund</h1>
-                        </button>
+                      <Link to = "/map" style={{ textDecoration: 'none' }}>
+                        <h1 className="stad">Höllviken</h1>
                       </Link> <br/>
                       
                       <img className="prickar" src={prickar_png} width="345" height="30" alt="prickar" />
