@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import logotyp_png from './logotyp_png.png';
-import prickar_png from './prickar_png.png';
+import logotyp_png from './logotyp_png.png'
+import prickar_png from './prickar_png.png'
 import  './map.js';
 import  './list';
 import {Link} from 'react-router-dom';
@@ -20,12 +20,14 @@ class App extends Component {
                     vandring under dagtid. Ett möte mellan matglada.
                     Tio stopp och tio smaksensationer.</p>
                       
-                      <Link to = "/map" style={{ textDecoration: 'none' }}>
-                        <h1 className="stad">Höllviken</h1>
-                      </Link> <br/>
+                      <Link to = "/map">
+                        <button className="stad">
+                        <h1>Lund</h1>
+                        </button>
+                      </Link> 
                       
                       <img className="prickar" src={prickar_png} width="345" height="30" alt="prickar" />
-                      <br/>
+                      
                       <Link to = "/list">
                         <button className="kommande">
                         <p>Kommande Madamilen!</p>
