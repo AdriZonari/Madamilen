@@ -22,10 +22,10 @@ class App extends Component {
                       
                       <Link to = "/map" style={{ textDecoration: 'none' }}>
                         <h1 className="stad">Höllviken</h1>
-                      </Link> <br/>
+                      </Link> 
                       
-                      <img className="prickar" src={prickar_png} width="345" height="30" alt="prickar" />
-                      <br/>
+                      <img className="prickar" src={prickar_png} width="320" height="30" alt="prickar" />
+                      <br/> <br/>
                       <Link to = "/list">
                         <button className="kommande">
                         <p>Kommande Madamilen!</p>
@@ -42,7 +42,7 @@ class App extends Component {
 const AppHeader = () =>  
     
       <header className="App-header">
-          <img src={logotyp_png} width="358" height="64" className="Madamilen-logo" alt="logo" />
+          <img src={logotyp_png} width="320" height="55" className="Madamilen-logo" alt="logo" />
         </header>
 
 export default App;

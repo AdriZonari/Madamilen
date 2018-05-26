@@ -5,7 +5,7 @@ import logotyp_png from './logotyp_png.png'
 const AppHeader = () =>  
     
       <header className="App-header">
-          <img src={logotyp_png} width="358" height="64" className="Madamilen-logo" alt="logo" />
+          <img src={logotyp_png} width="320" height="55" className="Madamilen-logo" alt="logo" />
         </header>
 
 
