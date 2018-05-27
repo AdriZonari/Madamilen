@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
-import logotyp_png from './logotyp_png.png'
+import logotyp_png from './logotyp_png.png';
+import {Navbar} from "./navbar";
 
 const AppHeader = () =>  
     
       <header className="App-header">
-          <img src={logotyp_png} width="320" height="55" className="Madamilen-logo" alt="logo" />
+          <img src={logotyp_png} width="358" height="64" className="Madamilen-logo" alt="logo" />
         </header>
 
 
 export class List extends Component {
   render() {
     return (
+        
 <div className="MadamilensList">
         <AppHeader/>
+        
         <div className="background">
                 <ul>
                         <li>Skanör/Falsterbo<br/>
@@ -29,7 +32,11 @@ export class List extends Component {
                 </ul>
                 
         </div>
+        <Navbar/>
 </div>
+
+        
+        
         )
     }
 }
