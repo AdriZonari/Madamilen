@@ -3,6 +3,8 @@ import { GoogleApiWrapper, InfoWindow, Map, Marker } from "google-maps-react";
 import Paper from "material-ui/Paper";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import location_user from './location_user.png';
+import map_marker_pink from './map_marker_pink.png';
+import map_marker_grey from './map_marker_grey.png';
 import { RestaurantList } from "./restaurantlist";
 
  
@@ -83,6 +85,7 @@ class GoogleMapsContainer extends React.Component {
         />
 
         <Marker
+          icon={map_marker_pink}
           onClick={this.onMarkerClick}
           title={"Fotevikens Café och Restaurang"}
           position={{ lat: 55.4282, lng: 12.9520 }}
@@ -92,6 +95,7 @@ class GoogleMapsContainer extends React.Component {
         />
 
         <Marker
+          icon={map_marker_grey}
           onClick={this.onMarkerClick}
           title={"Delitorget på ICA Toppen"}
           position={{ lat: 55.425826, lng: 12.964215 }}
@@ -101,6 +105,7 @@ class GoogleMapsContainer extends React.Component {
         />
 
         <Marker
+          icon={map_marker_grey}
           onClick={this.onMarkerClick}
           title={"Caféet i det Gröna"}
           position={{ lat: 55.419850, lng: 12.954818 }}
@@ -110,6 +115,7 @@ class GoogleMapsContainer extends React.Component {
         />
 
         <Marker
+          icon={map_marker_grey}
           onClick={this.onMarkerClick}
           title={"Vespa"}
           position={{ lat: 55.417900, lng: 12.952494 }}
@@ -119,6 +125,7 @@ class GoogleMapsContainer extends React.Component {
         />
 
         <Marker
+          icon={map_marker_grey}
           onClick={this.onMarkerClick}
           title={"Höllviken Kött och Grill"}
           position={{ lat: 55.420352, lng: 12.954790 }}
@@ -128,6 +135,7 @@ class GoogleMapsContainer extends React.Component {
         />
 
         <Marker
+          icon={map_marker_grey}
           onClick={this.onMarkerClick}
           title={"Näset by the Sea"}
           position={{ lat: 55.410222, lng: 12.932802 }}
@@ -137,6 +145,7 @@ class GoogleMapsContainer extends React.Component {
         />
 
         <Marker
+          icon={map_marker_grey}
           onClick={this.onMarkerClick}
           title={"Shakespeare Pub"}
           position={{ lat: 55.417738, lng: 12.951353 }}
@@ -146,6 +155,7 @@ class GoogleMapsContainer extends React.Component {
         />
 
         <Marker
+          icon={map_marker_grey}
           onClick={this.onMarkerClick}
           title={"Gateau"}
           position={{ lat: 55.420089, lng: 12.955317 }}
@@ -155,6 +165,7 @@ class GoogleMapsContainer extends React.Component {
         />
 
         <Marker
+          icon={map_marker_grey}
           onClick={this.onMarkerClick}
           title={"Smakverkeri"}
           position={{ lat: 55.414715, lng: 12.859918 }}
