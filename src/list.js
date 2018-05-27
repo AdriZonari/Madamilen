@@ -19,8 +19,7 @@ export class List extends Component {
         
         <div className="background">
                 <ul>
-                        <li>Skanör/Falsterbo<br/>
-                                12/05 </li>
+                        
                         <li>Höllviken<br/>
                                 02/06 </li>
                         <li>Lund<br/>

@@ -105,13 +105,26 @@ h1 {
 
 .RestaurantList ul{
   background: #ffffff;
-  width: 250px;
+  list-style: none;
+  width: 290px;
   height: auto;
   padding: 20px;
   margin: 400px 0px 0px 0px;
   opacity: 0.9;
   font-kerning: auto;
 }
+
+.RestaurantList ul li a {
+  text-decoration: none;
+  color: #404040;
+
+}
+
+div.customContainer{
+  margin: 0px;
+  display: inline;
+}
+
 
 .MadamilensList li {
   font-size: 2rem;
@@ -141,7 +154,7 @@ h1 {
 #navbar a {
   float: right;
   display: block;
-  color: #404040;
+  color: #ff00ff;
   text-align: center;
   padding: 14px;
   text-decoration: none;
