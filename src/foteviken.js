@@ -22,8 +22,8 @@ export class Foteviken extends React.Component {
         <div  className="RestaurantInfo">
         <h1>Meny</h1>
         <img className="prickar" src={prickar_png} width="250" height="22" alt="prickar" />
-        <p>"viking husmanskost"</p>
-        <h2><a href="https://fotevikensmuseum.se/d/museet/butiken">Restaurangens Hemsidan</a></h2>
+        <p>"Vikinga husmanskost"</p>
+        <h2><a href="https://fotevikensmuseum.se/d/museet/butiken">Restaurangens Hemsida</a></h2>
         </div>
         </div>
         <Navbar/>

@@ -22,8 +22,8 @@ export class Vespa extends React.Component {
         <div  className="RestaurantInfo">
         <h1>Meny</h1>
         <img className="prickar" src={prickar_png} width="250" height="22" alt="prickar" />
-        <p>"pizza meny"</p>
-        <h2><a href="https://hollviken.vespa.nu">Restaurangens Hemsidan</a></h2>
+        <p>"Pizza meny"</p>
+        <h2><a href="https://hollviken.vespa.nu">Restaurangens Hemsida</a></h2>
         </div>
         </div>
         <Navbar/>

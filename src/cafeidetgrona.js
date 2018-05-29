@@ -22,8 +22,8 @@ export class CafeidetGrona extends React.Component {
         <div  className="RestaurantInfo">
         <h1>Meny</h1>
         <img className="prickar" src={prickar_png} width="250" height="22" alt="prickar" />
-        <p>"gröna meny"</p>
-        <h2><a href="https://idetgrona.se/">Restaurangens Hemsidan</a></h2>
+        <p>"Gröna menyn"</p>
+        <h2><a href="https://idetgrona.se/">Restaurangens Hemsida</a></h2>
         </div>
         </div>
         <Navbar/>

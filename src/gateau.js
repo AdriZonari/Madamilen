@@ -23,7 +23,7 @@ export class Gateau extends React.Component {
         <h1>Meny</h1>
         <img className="prickar" src={prickar_png} width="250" height="22" alt="prickar" />
         <p>"Café och Bageri"</p>
-        <h2><a href="http://www.gateau.se/">Restaurangens Hemsidan</a></h2>
+        <h2><a href="http://www.gateau.se/">Restaurangens Hemsida</a></h2>
         </div>
         </div>
         <Navbar/>

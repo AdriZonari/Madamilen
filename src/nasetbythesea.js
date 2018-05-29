@@ -22,8 +22,8 @@ export class Nasetbythesea extends React.Component {
         <div  className="RestaurantInfo">
         <h1>Meny</h1>
         <img className="prickar" src={prickar_png} width="250" height="22" alt="prickar" />
-        <p>"seafood"</p>
-        <h2><a href="http://nasets.se">Restaurangens Hemsidan</a></h2>
+        <p>"Havets delikatesser"</p>
+        <h2><a href="http://nasets.se">Restaurangens Hemsida</a></h2>
         </div>
         </div>
         <Navbar/>

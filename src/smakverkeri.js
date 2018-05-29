@@ -22,8 +22,8 @@ export class Smakverkeri extends React.Component {
         <div  className="RestaurantInfo">
         <h1>Meny</h1>
         <img className="prickar" src={prickar_png} width="250" height="22" alt="prickar" />
-        <p>"ett unik upplevelse"</p>
-        <h2><a href="https://www.smakverkeri.se">Restaurangens Hemsidan</a></h2>
+        <p>"En unik upplevelse"</p>
+        <h2><a href="https://www.smakverkeri.se">Restaurangens Hemsida</a></h2>
         </div>
         </div>
         <Navbar/>

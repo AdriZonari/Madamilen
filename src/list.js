@@ -19,15 +19,16 @@ export class List extends Component {
         
         <div className="background">
                 <ul>
-                        
-                        <li>Höllviken<br/>
-                                02/06 </li>
-                        <li>Lund<br/>
-                                30/06 </li>
-                        <li>Malmö<br/>
-                                01/09 </li>
-                        <li>Helsingborg<br/>
-                                29/09 </li>
+                        <h1>Kommande Madamilen</h1>
+                        <p>Vi ses väl?</p>
+                        <li><h2>Höllviken</h2>
+                                <p>2 Juni</p> </li>
+                        <li><h2>Lund</h2>
+                                <p>30 Juni</p> </li>
+                        <li><h2>Malmö</h2>
+                                <p>1 September</p></li>
+                        <li><h2>Helsingborg</h2>
+                                <p>29 September</p> </li>
                 </ul>
                 
         </div>

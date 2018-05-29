@@ -22,8 +22,8 @@ export class Icatoppen extends React.Component {
         <div  className="RestaurantInfo">
         <h1>Meny</h1>
         <img className="prickar" src={prickar_png} width="250" height="22" alt="prickar" />
-        <p>"delitorget speciella"</p>
-        <h2><a href="https://www.ica.se/butiker/kvantum/vellinge/ica-toppen-hollviken-2941/butiken/jens-spalt/">Restaurangens Hemsidan</a></h2>
+        <p>"Delitorget speciella"</p>
+        <h2><a href="https://www.ica.se/butiker/kvantum/vellinge/ica-toppen-hollviken-2941/butiken/jens-spalt/">Restaurangens Hemsida</a></h2>
         </div>
         </div>
         <Navbar/>

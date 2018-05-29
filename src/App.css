@@ -57,6 +57,7 @@ h1 {
 
  p {
   font-size: 1.8rem;
+   
 }
 
 .infowindowtext {
@@ -109,6 +110,7 @@ h1 {
   width: 290px;
   height: auto;
   padding: 20px;
+  border-radius: 1rem;	
   margin: 400px 0px 0px 0px;
   opacity: 0.9;
   font-kerning: auto;
@@ -119,6 +121,7 @@ h1 {
 
 }
 
+
 div.customContainer{
   margin: 0px;
   display: inline;
@@ -126,7 +129,7 @@ div.customContainer{
 
 
 .MadamilensList li {
-  font-size: 2rem;
+  font-size: 1.2rem;
   position: relative;
   align-content: center;
   list-style-image: url('map_marker_ball_pink_icon.png');
