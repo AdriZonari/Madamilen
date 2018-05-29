@@ -4,6 +4,7 @@ import Paper from "material-ui/Paper";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import location_user from './location_user.png';
 import { RestaurantList } from "./restaurantlist";
+import {Navbar} from "./navbar";
 
  
 
@@ -70,7 +71,7 @@ class GoogleMapsContainer extends React.Component {
         initialCenter={{ lat: 55.405383, lng: 12.919958}}
         gestureHandling= {'cooperative'}
       >
-
+      <Navbar/>
       <RestaurantList/>
         
         <Marker 

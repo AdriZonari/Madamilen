@@ -16,6 +16,7 @@ import { Nasetbythesea } from "./nasetbythesea";
 import { Shakespearepub } from "./shakespearepub";
 import { Gateau } from "./gateau";
 import { Smakverkeri } from "./smakverkeri";
+import {Navbar} from "./navbar";
 
 ReactDOM.render(
   <Router>
@@ -34,6 +35,7 @@ ReactDOM.render(
       <Route path="/shakespearepub" component={Shakespearepub} />
       <Route path="/gateau" component={Gateau} />
       <Route path="/smakverkeri" component={Smakverkeri} />
+      <Route path="/navbar" component={Navbar} />
       <Route component={Whoops404} /> {/*genom att inte ange path tar den allt
       som inte redan matchats ovan*/}
     </Switch>

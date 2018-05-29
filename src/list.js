@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import logotyp_png from './logotyp_png.png'
+import logotyp_png from './logotyp_png.png';
+import {Navbar} from "./navbar";
 
 const AppHeader = () =>  
     
@@ -12,12 +13,13 @@ const AppHeader = () =>
 export class List extends Component {
   render() {
     return (
+        
 <div className="MadamilensList">
         <AppHeader/>
+        
         <div className="background">
                 <ul>
-                        <li>Skanör/Falsterbo<br/>
-                                12/05 </li>
+                        
                         <li>Höllviken<br/>
                                 02/06 </li>
                         <li>Lund<br/>
@@ -29,7 +31,11 @@ export class List extends Component {
                 </ul>
                 
         </div>
+        <Navbar/>
 </div>
+
+        
+        
         )
     }
 }

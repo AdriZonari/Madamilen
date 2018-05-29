@@ -1,5 +1,8 @@
 import React from 'react';
 import logotyp_png from './logotyp_png.png'
+import {Navbar} from "./navbar";
+import prickar_png from './prickar_png.png'
+
 
 const AppHeader = () =>  
     
@@ -18,10 +21,12 @@ export class Kottochgrill extends React.Component {
         <div className="background">
         <div  className="RestaurantInfo">
         <h1>Meny</h1>
+        <img className="prickar" src={prickar_png} width="250" height="22" alt="prickar" />
         <p>"grillfest"</p>
         <h2><a href="http://hollvikenskottogrill.se">Restaurangens Hemsidan</a></h2>
         </div>
         </div>
+        <Navbar/>
         </div>
 
       )

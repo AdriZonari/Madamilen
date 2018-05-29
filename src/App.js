@@ -21,7 +21,9 @@ class App extends Component {
                     Tio stopp och tio smaksensationer.</p>
                       
                       <Link to = "/map" style={{ textDecoration: 'none' }}>
-                        <h1 className="stad">Höllviken</h1>
+                        <button className="stad">
+                        <h1>Höllviken</h1>
+                        </button>
                       </Link> <br/>
                       
                       <img className="prickar" src={prickar_png} width="345" height="30" alt="prickar" />
