@@ -21,21 +21,21 @@ import {Navbar} from "./navbar";
 ReactDOM.render(
   <Router>
     <Switch>
-      <Route path="/" exact component={App} />
-      <Route path="/map" component={GoogleMapsContainer} /> {/* ange inte filer i path,
+      <Route path={process.env.PUBLIC_URL + "/"} exact component={App} />
+      <Route path={process.env.PUBLIC_URL + "/map"} component={GoogleMapsContainer} /> {/* ange inte filer i path,
       det ska bara vara vad som ska synas i adressen, behover inte finnas i
       verkligheten*/}
-      <Route path="/list" component={List} />
-      <Route path="/foteviken" component={Foteviken} />
-      <Route path="/icatoppen" component={Icatoppen} />
-      <Route path="/cafeidetgrona" component={CafeidetGrona} />
-      <Route path="/vespa" component={Vespa} />
-      <Route path="/kottochgrill" component={Kottochgrill} />
-      <Route path="/nasetbythesea" component={Nasetbythesea} />
-      <Route path="/shakespearepub" component={Shakespearepub} />
-      <Route path="/gateau" component={Gateau} />
-      <Route path="/smakverkeri" component={Smakverkeri} />
-      <Route path="/navbar" component={Navbar} />
+      <Route path={process.env.PUBLIC_URL + "/list"} component={List} />
+      <Route path={process.env.PUBLIC_URL + "/foteviken"} component={Foteviken} />
+      <Route path={process.env.PUBLIC_URL + "/icatoppen"} component={Icatoppen} />
+      <Route path={process.env.PUBLIC_URL + "/cafeidetgrona"} component={CafeidetGrona} />
+      <Route path={process.env.PUBLIC_URL + "/vespa"} component={Vespa} />
+      <Route path={process.env.PUBLIC_URL + "/kottochgrill"} component={Kottochgrill} />
+      <Route path={process.env.PUBLIC_URL + "/nasetbythesea"} component={Nasetbythesea} />
+      <Route path={process.env.PUBLIC_URL + "/shakespearepub"} component={Shakespearepub} />
+      <Route path={process.env.PUBLIC_URL + "/gateau"} component={Gateau} />
+      <Route path={process.env.PUBLIC_URL + "/smakverkeri"} component={Smakverkeri} />
+      <Route path={process.env.PUBLIC_URL + "/navbar"} component={Navbar} />
       <Route component={Whoops404} /> {/*genom att inte ange path tar den allt
       som inte redan matchats ovan*/}
     </Switch>
