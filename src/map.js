@@ -4,7 +4,7 @@ import Paper from "material-ui/Paper";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import location_user from './location_user.png';
 import { RestaurantList } from "./restaurantlist";
-import {Navbar} from "./navbar";
+import {Navbar} from "./navbar"
 
  
 
@@ -53,6 +53,7 @@ class GoogleMapsContainer extends React.Component {
 
    const style = {
       width: "100",
+      height: "700px",
       marginLeft: "auto",
       marginRight: "auto"
     };

@@ -10,8 +10,8 @@ export class Navbar extends React.Component {
     render() {
       return (
         <div id="navbar">
-  <Link to="/"><FontAwesomeIcon icon={faHome}></FontAwesomeIcon></Link>
-  <Link to="map"><FontAwesomeIcon icon={faMapMarkerAlt}>Karta</FontAwesomeIcon></Link>
+  <Link to={process.env.PUBLIC_URL + "/"}><FontAwesomeIcon icon={faHome}></FontAwesomeIcon></Link>
+  <Link to={process.env.PUBLIC_URL + "/map"}><FontAwesomeIcon icon={faMapMarkerAlt}>Karta</FontAwesomeIcon></Link>
   
 </div>
 

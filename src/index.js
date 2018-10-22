@@ -16,7 +16,7 @@ import { Nasetbythesea } from "./nasetbythesea";
 import { Shakespearepub } from "./shakespearepub";
 import { Gateau } from "./gateau";
 import { Smakverkeri } from "./smakverkeri";
-import {Navbar} from "./navbar";
+import { Navbar } from "./navbar";
 
 ReactDOM.render(
   <Router>

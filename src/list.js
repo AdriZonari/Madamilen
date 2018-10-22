@@ -17,7 +17,7 @@ export class List extends Component {
 <div className="MadamilensList">
         <AppHeader/>
         
-        <div className="background">
+        {/*<div className="background">*/}
                 <ul>
                         
                         <li>Höllviken<br/>
@@ -30,7 +30,7 @@ export class List extends Component {
                                 29/09 </li>
                 </ul>
                 
-        </div>
+        
         <Navbar/>
 </div>
 
