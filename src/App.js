@@ -13,7 +13,6 @@ class App extends Component {
       <div className="App">
         <AppHeader />
       <div className="App-intro">
-        <div className="background"></div>
           <div className="foreground">
              <h1>Välkommen!</h1>
                 <p>Madamilen är en kulinarisk
